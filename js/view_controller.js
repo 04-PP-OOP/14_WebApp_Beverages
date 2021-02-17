@@ -2,13 +2,30 @@
 /* View- Controller */
 
 /* Der Plan
-    Einlesen Daten von Webseite :: 
+    Einlesen Daten von Webseite :: check!
 	Check Daten :: 
     Btn. Trigger :: 
-    Business-Logic (Alter --> Getränk) :: 
-    Bild austauschen :: ckeck!
+    Business-Logic (Alter --> Getränk) :: check!
+    Bild austauschen :: check!
 */
 
+// Modul Ablaufsteuerung | Test:
+//controller();
+function controller() {
+    ausgabe(updateImg(checkAge(getInput())))
+}
+
+
+
+
+
+// Modul Eingabe | Test:
+//ausgabe(getInput());
+function getInput() {
+    let inputField = document.getElementsByName("eingabe")[0];
+    let age = parseInt(inputField.value);
+    return age;
+}
 
 // Modul: Business-Logic (Mapping) | Test:
 //ausgabe(checkAge(2));
@@ -32,7 +49,6 @@ function checkAge(age) {
                 return "tee"; 
         }
 }
-
 
 // Modul: Bild aktualisieren | Test:
 //ausgabe(updateImg("cola"));
